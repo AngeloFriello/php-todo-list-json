@@ -18,5 +18,6 @@ createApp({
 	},
 	created() {
 		this.fetchData()
+		console.log(this.todos)
 	},
 }).mount('#app')

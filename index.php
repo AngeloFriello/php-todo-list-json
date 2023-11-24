@@ -11,11 +11,18 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body id="app">
-    <form action="" method="POST">
-        <input type="text" name="newTodo">
-        <input type="submit" value="invia">
-    </form>
+<body>
+    <div id="app">
+        <form action="" method="POST">
+            <input type="text" name="newTodo">
+            <input type="submit" value="invia">
+        </form>
+
+        <ul>
+            <li v-for="(todo, i) in todos" :key="i">{{ todo.text }}</li>
+        </ul>
+    </div>
+   
 </body>
 
 <script src="./js/app.js"></script>
