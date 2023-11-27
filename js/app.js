@@ -43,8 +43,8 @@ createApp({
 				return this.todos[i].done = true
 			}
 		},
-		removeList(){
-
+		removeList(i){
+			this.todos.splice(i,1)
 		},
 	},
 	created() {

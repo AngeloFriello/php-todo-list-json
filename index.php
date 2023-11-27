@@ -24,7 +24,7 @@
                         <span :class="todo.done != true ? 'barrato' : 'none' " @click="toggleList(i)">
                             {{ todo.text }}
                         </span>
-                        <span class="delete">
+                        <span class="delete" @click="removeList(i)">
                             ELIMINA
                         </span>
                     </li>

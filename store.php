@@ -15,7 +15,7 @@ if ($new_todo) {
  // lo formatto per poterlo aggiungere nel array
   $todos[] = [ 
     'text' => $new_todo,
-    'done' => false
+    'done' => true
   ];
 
   $response['results'] = $todos;
