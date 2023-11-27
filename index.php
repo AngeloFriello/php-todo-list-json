@@ -21,7 +21,7 @@
             <div class="list-container">
                 <ul>
                     <li v-for="(todo, i) in todos" :key="i" class="flex jc-b">
-                        <span>
+                        <span :class="todo.done != true ? 'barrato' : 'none' " @click="toggleList(i)">
                             {{ todo.text }}
                         </span>
                         <span class="delete">

@@ -36,6 +36,16 @@ createApp({
 					this.newTodo = ''
 				})
 		},
+		toggleList(i){
+			if(this.todos[i].done === true){
+				return this.todos[i].done = false
+			}else{
+				return this.todos[i].done = true
+			}
+		},
+		removeList(){
+
+		},
 	},
 	created() {
 		this.fetchData()
