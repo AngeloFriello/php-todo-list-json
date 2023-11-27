@@ -1,26 +1,8 @@
 
 <?php
 
-
-$todos = [
-  [
-  'text' => 'PHP',
-  'done' => false
-  ],
-  [
-  'text' => 'JavaScript',
-  'done' => false
-  ],
-  [
-  'text' => 'HTML',
-  'done' => true
-  ],
-  [
-  'text' => 'CSS',
-  'done' => true
-  ]
-];
-
+$todos_json = file_get_contents('./item.json');
+$todos = json_decode($todos_json, true);
 
 $response = [
   'success' => true,

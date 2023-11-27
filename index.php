@@ -13,10 +13,8 @@
 </head>
 <body>
     <div id="app">
-        <form action="" method="POST">
-            <input type="text" name="newTodo">
-            <input type="submit" value="invia">
-        </form>
+
+            <input type="text" v-model="newTodo" @keyup.enter="addTodo()">
 
         <ul>
             <li v-for="(todo, i) in todos" :key="i">{{ todo.text }}</li>
