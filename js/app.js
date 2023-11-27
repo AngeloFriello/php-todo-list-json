@@ -16,12 +16,9 @@ createApp({
 			})
 		},
 		addTodo() {
-			console.log(this.newTodo)
-
 			if (!this.newTodo) {
 				return
 			}
-
 			const data = {
 				todo: this.newTodo,
 			}
@@ -33,8 +30,9 @@ createApp({
 					},
 				})
 				.then((res) => {
-					console.log(res.data)
-					this.todos = res.data.todosm
+					// console.log("PROVA")
+					// console.log(res.data.results)
+					this.todos = res.data.results
 					this.newTodo = ''
 				})
 		},
